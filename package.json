@@ -7,7 +7,8 @@
     "prettier": "npx prettier --write ./src",
     "lint": "eslint ./ --ignore-path .gitignore",
     "fix": "npm run prettier && eslint --fix ./ --ignore-path .gitignore",
-    "build": "npm run fix && tsc",
+    "copy": "ts-node-dev ./src/copy.ts",
+    "build": "npm run fix && npm run copy && tsc",
     "start": "npm run build && node dist/index.js",
     "dev": "npm run fix && ts-node-dev --respawn src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"

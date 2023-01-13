@@ -12,6 +12,9 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "src/copy.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }
