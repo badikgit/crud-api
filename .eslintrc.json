@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": false,
+        "es2021": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base"
+    ],
+    "root": true,
+    "parserOptions": {
+        "project": "./tsconfig.eslint.json",
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import",
+        "prettier"
+    ],
+    "rules": {
+        "import/prefer-default-export": "off",
+        "no-console": "off"
+    }
+}
