@@ -1,2 +1,2 @@
-# -nodejs-template
-Configurated NodeJS Template with Typescript, ESLint, Pretier with airbnb standart
+# CRUD API
+Simple CRUD API using in-memory database underneath
