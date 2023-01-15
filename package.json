@@ -4,13 +4,13 @@
   "description": "Simple CRUD API using in-memory database underneath",
   "main": "index.js",
   "scripts": {
-    "prettier": "npx prettier --write ./src",
     "lint": "eslint ./ --ignore-path .gitignore",
+    "prettier": "npx prettier --write ./src",
     "fix": "npm run prettier && eslint --fix ./ --ignore-path .gitignore",
-    "copy": "ts-node-dev ./src/copy.ts",
-    "build": "npm run fix && npm run copy && tsc",
-    "start": "npm run build && node dist/index.js",
-    "dev": "npm run fix && ts-node-dev --respawn src/index.ts",
+    "build": "npm run fix && npm run copyFavicon && tsc",
+    "start:dev": "npm run fix && ts-node-dev --respawn src/index.ts",
+    "start:prod": "npm run build && node dist/index.js",
+    "copyFavicon": "ts-node-dev ./copyFavicon.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/badikgit/nodejs-template#readme",
   "devDependencies": {
+    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "eslint": "^8.31.0",
     "eslint-config-airbnb-base": "^15.0.0",

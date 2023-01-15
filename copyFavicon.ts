@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import { cp } from 'fs/promises';
 
-export const copy = async () => {
+export const copyFavicon = async () => {
   const srcPath = resolve('.', 'favicon.ico');
   const destPath = resolve('.', 'dist', 'favicon.ico');
 
@@ -12,4 +12,4 @@ export const copy = async () => {
   }
 };
 
-(async () => copy())();
+(async () => copyFavicon())();
