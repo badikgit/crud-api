@@ -8,9 +8,9 @@
     "prettier": "npx prettier --write ./src",
     "fix": "npm run prettier && eslint --fix ./ --ignore-path .gitignore",
     "build": "npm run fix && npm run copyFavicon && tsc",
-    "start:dev": "npm run fix && ts-node-dev --respawn src/index.ts",
-    "start:prod": "npm run build && node dist/index.js",
-    "copyFavicon": "ts-node-dev ./copyFavicon.ts",
+    "start:dev": "npm run --silent fix && nodemon -x ts-node src/index.ts",
+    "start:prod": "npm run --silent build && node dist/index.js",
+    "copyFavicon": "ts-node ./copyFavicon.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,8 +37,9 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.4",
     "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.2",
-    "ts-node-dev": "^2.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   },
   "dependencies": {
