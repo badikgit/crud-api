@@ -6,7 +6,7 @@ import { api, IResponse, IUser } from './api';
 
 dotenv.config();
 
-const port = process.env.PORT || '9000';
+const port = process.env.PORT || '4000';
 
 const server = createServer(async (req, res) => {
   const url = (req.url || '').replace(/^\//gm, '').replace(/\/$/gm, '');
